@@ -1,17 +1,16 @@
 plugins {
     id("java")
-    id("com.gradleup.shadow") version "8.9.3"
+    id("maven-publish")
 }
 
 allprojects {
     group = "net.vxoidpvp"
-    version = "0.0.1"
+    version = "1.0.0"
 }
 
 subprojects {
-    version = rootProject.version
-
     apply(plugin = "java")
+    apply(plugin = "maven-publish")
 
     repositories {
         maven("https://repo.papermc.io/repository/maven-public/")
